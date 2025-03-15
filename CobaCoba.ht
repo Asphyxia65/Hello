@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<style>
+    body {
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8yrXSbVqoYKKRZKnOnvIx7dceh0prscDT6ST3Qn95ojNyJjfYu_3_Mug&s=10');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        font-family: Monospace;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Try</title>
+    <style>
+        body {
+            font-family: Monospace;
+            text-align: center;
+            margin: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>First Try</h2>
+    <button onclick="alert('💀Selamat Anda Kena Doxing💀'); getIP()">Next Page>></button>
+    <p id="result">Apakah Button Ini Work</p>
+
+    <script>
+        function getIP() {
+            fetch('https://api64.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('result').innerText = "function getAPI() .then (response => recives .json) .then (.data => .document getElementById => ('Result=" + data.ip;
+                }) 
+                .catch(error => {
+                    console.error("Error:", error);
+                    document.getElementById('result').innerText = "Gagal mendapatkan IP.";
+                });
+        }
+    </script>
+</body>
+</html>
+
